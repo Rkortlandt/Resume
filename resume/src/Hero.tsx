@@ -4,6 +4,8 @@ import tsImg from './assets/ts.jfif';
 import reactImg from './assets/react.svg';
 import vueImg from './assets/vue.png';
 import tailWindImg from './assets/tailwind.png';
+import w3schoolsImg from './assets/w3schools.png';
+import cppImg from './assets/c++.png';
 
 function WorkExperience () {
     return (
@@ -91,7 +93,7 @@ function TechnologySkills () {
                             <li className="text-slate-200">Used basic principles of Object oriented programming and conditional logic</li>
                             <li className="text-slate-200">Team qualified for state, ending up 34th in the State </li>
                             <li className="text-slate-200">Qualified and competed at the World Competition in Houston, TX. </li>
-                            <li className="text-slate-200">Heres a video of our robot <a className='text-teal-200 underline' href="https://www.youtube.com/watch?v=wdcOsfQ0gQE&t">here</a></li>
+                            <li className="text-slate-200">Video of our robot <a className='text-teal-200 underline' href="https://www.youtube.com/watch?v=wdcOsfQ0gQE&t">here</a> (5152)</li>
                         </ul>
                     </div>
                 );
@@ -196,6 +198,36 @@ function AboutMe () {
     );
 }
 
+function Certifications () {
+    return (
+        <div className="bg-slate-600 mx-10 max-sm:mx-3 my-5 px-2 py-2 rounded-lg" >
+            <h1 className="text-4xl font-bold text-slate-200 py-1">Certifications</h1>
+            <div className="bg-slate-800 rounded-md py-2 my-2">
+                <p className="text-xl text-slate-200 py-1 px-2">Currently Working On</p>
+                    <p className='text-slate-200 px-3'>A certification from <a className='text-teal-200 underline' href='https://pythoninstitute.org'>Python Institute</a></p>   
+            </div>
+        </div>
+    );
+}
+
+function References () {
+    return (
+        <div className="bg-slate-600 mx-10 max-sm:mx-3 my-5 px-2 py-2 rounded-lg" >
+            <h1 className="text-4xl font-bold text-slate-200 py-1">References</h1>
+            <div className="bg-slate-800 rounded-md py-4 my-2">
+                <div className='px-5'>
+                    <p className="text-slate-200 text-2xl font-bold ">Michelle Triemstra - Director of Technology, Otsego Public Schools</p> 
+                    <p className="text-slate-200 text-xl px-3">Contact info: <br></br> 400 Sherwood Street Otsego, Mi 49078 <br></br> Work: 269-694-7900</p>
+                </div>
+                <div className='px-5'>
+                <p className="text-slate-200 text-2xl font-bold">Michael Miller Teacher/Robotics Coach, Otsego Public Schools</p>
+                <p className="text-slate-200 text-xl px-3">Contact info <br></br> 550 Washington Street Otsego, MI 49078 <br></br> 269-694-7900</p>
+                </div>
+            </div>
+        </div>
+    );
+}
+
 export default function Hero () {
     return (
         <div className="flex flex-col bg-slate-800 h-full w-full pt-12">
@@ -205,8 +237,14 @@ export default function Hero () {
             <div className='my-20'>
                 <WorkExperience/>
             </div>
-            <div className='my-20 mb-56'>
+            <div className='my-20'>
                 <TechnologySkills/>
+            </div>
+            <div className='my-20'>
+                <References/>
+            </div>
+            <div className='my-20 mb-56'>
+                <Certifications/>
             </div>
         </div>
     );
