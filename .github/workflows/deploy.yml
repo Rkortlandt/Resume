@@ -20,7 +20,7 @@ jobs:
           node-version: 16
 
       - name: Install dependencies
-        uses: resume/npm-install@v1
+        uses: Resume/npm-install@v1
 
       - name: Build project
         run: npm run build
