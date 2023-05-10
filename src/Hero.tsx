@@ -279,7 +279,7 @@ export default function Hero (props: {scrollTo: 'AboutMe' | 'WorkExperience' | '
     }, [props.scrollTo]);
     return (
         <div className="flex flex-col bg-slate-800 h-full w-full pt-12">
-            <div className='my-20' ref={AboutMeRef}>
+            <div className='mb-20' ref={AboutMeRef}>
                 <AboutMe/>
             </div>
             <div className='my-20' ref={WorkExperienceRef}>
