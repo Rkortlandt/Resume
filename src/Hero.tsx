@@ -80,7 +80,7 @@ function TechnologySkills () {
         if (!isPaused) {
             const timer = setTimeout(() => {
                 handleRightClick();
-            }, 12000); // 3000ms = 3 seconds
+            }, 30000); // 3000ms = 3 seconds
             return () => {
                 clearTimeout(timer);
             };
@@ -91,7 +91,7 @@ function TechnologySkills () {
         switch (cardNum) {
             case 0:
                 return (
-                    <div className="bg-slate-800 rounded-md py-2 my-2 sm:h-84">
+                    <div className="bg-slate-800 rounded-md py-2 my-2 sm:h-84 transition-colors duration-300">
                         <div className='md:flex mx-5 max-md:flex-col items-center justify-between'>
                             <p className="text-slate-200 text-2xl font-bold">Programmer on high school robotics team</p> 
                             <p className="text-slate-200 mx-2 pt-1">2023 Season Charged Up</p>
@@ -99,7 +99,7 @@ function TechnologySkills () {
                         <ul className='list-disc list-inside mx-12'>
                             <li className="text-slate-200">Worked to program the robot for both autonomous mode and driver controlled mode</li>
                             <li className="text-slate-200">Used Java</li>
-                            <li className="text-slate-200">Used basic principles of Object oriented programming and conditional logic</li>
+                            <li className="text-slate-200">Used basic principles of object oriented programming and conditional logic</li>
                             <li className="text-slate-200">Team qualified for state, ending up 34th in the State </li>
                             <li className="text-slate-200">Qualified and competed at the World Competition in Houston, TX. </li>
                             <li className="text-slate-200">Video of our robot <a className='text-teal-200 underline' href="https://www.youtube.com/watch?v=wdcOsfQ0gQE&t">here</a> (5152)</li>
@@ -108,7 +108,7 @@ function TechnologySkills () {
                 );
             case 1:
                 return (
-                    <div className="bg-slate-800 rounded-md py-2 my-2 sm:h-84 ">
+                    <div className="bg-slate-800 rounded-md py-2 my-2 sm:h-84 transition-colors duration-300">
                           <div className='md:flex mx-5 max-md:flex-col items-center justify-between'>
                             <p className="text-slate-200 text-2xl font-bold">Web Development</p> 
                         </div>
@@ -130,9 +130,15 @@ function TechnologySkills () {
                                     <img src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=500" width={50} height={50}></img>
                                 </div>
                             </div>
-                            <li className="text-slate-200">Knowledge of Javascript and Typescript as well as frameworks such as React and Vue</li>
-                            <li className="text-slate-200">I use TailwindCSS for styling</li>
-                            <li className="text-slate-200">I created a project in 8th grade for visualizing translations dilations, rotations, and reflections. I am currently working on V2.0 that adds in react and is way better overall but for now you can view 1.0 <a href='https://rkortlandt.github.io/Translation-Project/' className='text-teal-200 underline'>here</a></li>
+                            <li className="text-slate-200 text-bold">Knowledge of...</li>
+                                <ul className='mx-7 list-decimal list-inside'>
+                                    <li className="text-slate-200 text-sm">Javascript</li>
+                                    <li className="text-slate-200 text-sm">Typescript</li>
+                                    <li className="text-slate-200 text-sm">Vue</li>
+                                    <li className="text-slate-200 text-sm">React, which I used for this website</li>
+                                    <li className="text-slate-200 text-sm">TailwindCSS for styling</li>
+                                </ul>
+                            <li className="text-slate-200">I created a project in 8th grade for visualizing translations, dilations, rotations, and reflections. I am currently working on V2.0 that uses React and is much better overall. You can view V1.0 <a href='https://rkortlandt.github.io/Translation-Project/' className='text-teal-200 underline'>here</a></li>
                             <li className="text-slate-200">I am also currently working on an Application using Vue and a backend technology called <a href='https://pocketbase.io' className='text-teal-200 underline'>Pocketbase</a> to create a scouting app for FIRST roboitcs</li>
                         </ul>
                     </div>
@@ -184,9 +190,9 @@ function AboutMe () {
         if (hour < 12) {
             return "Good Morning 🌞";
         } else if (hour < 18) {
-            return "Afternoon, hope you're having a good day 😄.";
+            return "Good afternoon, I hope you're having a good day.";
         } else {
-            return "Good Evening, 🌇";
+            return "Good evening, 🌇";
         }
     }
     //function that gets the number of years since 2008
@@ -201,7 +207,7 @@ function AboutMe () {
         <div className="bg-slate-600 mx-10 max-sm:mx-3 my-5 px-2 py-2 rounded-lg" >
             <h1 className="text-4xl font-bold text-slate-200 py-1">About Me</h1>
             <div className="bg-slate-800 rounded-md py-2 my-2">
-                <p className="text-xl text-slate-200 py-1 px-2">{getTime()} My name is Rowan and I am a {getYears()} year old software developer. Welcome to my resume.</p>
+                <p className="text-lg text-slate-200 py-1 px-2">{getTime()} My name is Rowan and I am a {getYears()} year old software developer. I play tennis in the fall, I love to read, and I am currently a Boy Scout. I attend Otsego High School and have a 4.0 GPA I am also in band and on the Drumline. I was selected to serve on the superintendent's advisory council. I am a very hard worker and motivated individual.</p>
             </div>
         </div>
     );
