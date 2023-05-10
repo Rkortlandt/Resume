@@ -1,10 +1,19 @@
+/* eslint-disable @typescript-eslint/ban-ts-comment */
+//@ts-ignore
 import React, { useEffect, useState } from 'react';
+//@ts-ignore
 import jsImg from './assets/js.webp';
+//@ts-ignore
 import tsImg from './assets/ts.jfif';
+//@ts-ignore
 import reactImg from './assets/react.svg';
+//@ts-ignore
 import vueImg from './assets/vue.png';
+//@ts-ignore
 import tailWindImg from './assets/tailwind.png';
+//@ts-ignore
 import w3schoolsImg from './assets/w3schools.png';
+//@ts-ignore
 import cppImg from './assets/c++.png';
 
 function WorkExperience () {
