@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/ban-ts-comment */
 //@ts-ignore
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 //@ts-ignore
 import jsImg from './assets/js.webp';
 //@ts-ignore
@@ -237,22 +237,55 @@ function References () {
     );
 }
 
-export default function Hero () {
+function scrollIntoView (ref: React.RefObject<HTMLDivElement>) {
+    if (ref.current === null) return;
+    ref.current.scrollIntoView({behavior: 'smooth', block: 'center'});
+}
+
+export default function Hero (props: {scrollTo: 'AboutMe' | 'WorkExperience' | 'TechnologySkills' | 'References' | 'Certifications'}) {
+
+    const AboutMeRef = useRef<HTMLDivElement>(null);
+    const WorkExperienceRef = useRef<HTMLDivElement>(null);
+    const TechnologySkillsRef = useRef<HTMLDivElement>(null);
+    const ReferencesRef = useRef<HTMLDivElement>(null);
+    const CertificationsRef = useRef<HTMLDivElement>(null);
+    
+    useEffect(() => {
+        switch (props.scrollTo) {
+            case 'AboutMe':
+                scrollIntoView(AboutMeRef);
+                break;
+            case 'WorkExperience':
+                scrollIntoView(WorkExperienceRef);
+                break;
+            case 'TechnologySkills':
+                scrollIntoView(TechnologySkillsRef);
+                break;
+            case 'References':
+                scrollIntoView(ReferencesRef);
+                break;
+            case 'Certifications':
+                scrollIntoView(CertificationsRef);
+                break;
+            default:
+                break;
+        }
+    }, [props.scrollTo]);
     return (
         <div className="flex flex-col bg-slate-800 h-full w-full pt-12">
-              <div className='my-20'>
+            <div className='my-20' ref={AboutMeRef}>
                 <AboutMe/>
             </div>
-            <div className='my-20'>
+            <div className='my-20' ref={WorkExperienceRef}>
                 <WorkExperience/>
             </div>
-            <div className='my-20'>
+            <div className='my-20' ref={TechnologySkillsRef}>
                 <TechnologySkills/>
             </div>
-            <div className='my-20'>
+            <div className='my-20' ref={ReferencesRef}>
                 <References/>
             </div>
-            <div className='my-20 mb-56'>
+            <div className='my-20 mb-56' ref={CertificationsRef}>
                 <Certifications/>
             </div>
         </div>
