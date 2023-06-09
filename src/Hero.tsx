@@ -257,6 +257,7 @@ export default function Hero (props: {scrollTo: 'AboutMe' | 'WorkExperience' | '
     const CertificationsRef = useRef<HTMLDivElement>(null);
     
     useEffect(() => {
+        console.log(`scrolling to ${props.scrollTo}`)
         switch (props.scrollTo) {
             case 'AboutMe':
                 scrollIntoView(AboutMeRef);
