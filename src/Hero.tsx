@@ -1,52 +1,43 @@
 /* eslint-disable @typescript-eslint/ban-ts-comment */
 //@ts-ignore
 import React, { useEffect, useRef, useState } from 'react';
-//@ts-ignore
 import jsImg from './assets/js.webp';
-//@ts-ignore
 import tsImg from './assets/ts.jfif';
-//@ts-ignore
 import reactImg from './assets/react.svg';
-//@ts-ignore
 import vueImg from './assets/vue.png';
-//@ts-ignore
-import tailWindImg from './assets/tailwind.png';
-//@ts-ignore
-import w3schoolsImg from './assets/w3schools.png';
-//@ts-ignore
-import cppImg from './assets/c++.png';
+import './index.css';
 
 function WorkExperience () {
     return (
-        <div className="bg-slate-600 mx-10 max-sm:mx-3 my-5 px-2 py-2 rounded-lg" >
-            <h1 className="text-4xl font-bold text-slate-200 py-1">Work Experience</h1>
-            <div className="bg-slate-800 rounded-md py-2 my-2">
+        <div className="card-background" >
+            <h1 className="card-title">Work Experience</h1>
+            <div className="card-card">
                 <div className="flex mx-5 max-sm:flex-col justify-center">
-                    <p className="text-slate-200 font-bold text-2xl">Summer Technology Crew Assistant</p>
+                    <p className="card-subtitle">Summer Technology Crew Assistant</p>
                     <a className="grow"></a>
-                    <p className="text-slate-200 font-bold">Summer 2022</p>
+                    <p className="text-important">Summer 2022</p>
                 </div>
                 <div className="mx-12">
-                    <p className="text-slate-200 font-semibold">Otsego Public Schools, Otsego, MI</p>
+                    <p className="text-important">Otsego Public Schools, Otsego, MI</p>
                     <ul className="list-disc list-inside">
-                        <li className="text-slate-200">Worked with the Director of Technology and her crew to deploy over 2,000 new devices</li>
-                        <li className="text-slate-200">Rewired Chromebook Carts</li>
-                        <li className="text-slate-200">Replaced old devices with new ones</li>
-                        <li className="text-slate-200">Unboxed new Chromebooks and iPads, sanitized and enrolled them into the system</li>
-                        <li className="text-slate-200">Asset tagged Chromebooks, iPads, and chargers</li>
+                        <li className="text">Worked with the Director of Technology and her crew to deploy over 2,000 new devices</li>
+                        <li className="text">Rewired Chromebook Carts</li>
+                        <li className="text">Replaced old devices with new ones</li>
+                        <li className="text">Unboxed new Chromebooks and iPads, sanitized and enrolled them into the system</li>
+                        <li className="text">Asset tagged Chromebooks, iPads, and chargers</li>
                     </ul>
                 </div>
             </div>
-            <div className="bg-slate-800 rounded-md py-2 my-2">
+            <div className="card-card">
                 <div className="flex mx-5 max-sm:flex-col justify-center">
-                    <p className="text-slate-200 font-bold text-2xl">Corn Detasseling</p>
+                    <p className="card-subtitle">Corn Detasseling</p>
                     <a className="grow"></a>
-                    <p className="text-slate-200 font-bold">Summer 2021</p>
+                    <p className="text-important">Summer 2021</p>
                 </div>
                 <div className="mx-12">
-                    <p className="text-slate-200 font-semibold">Great Lakes Detasseling, LLC., Portage, MI 49002</p>
+                    <p className="text-important">Great Lakes Detasseling, LLC., Portage, MI 49002</p>
                     <ul className="list-disc list-inside">
-                        <li className="text-slate-200">Seasonal helper to detassel corn</li>
+                        <li className="text">Seasonal helper to detassel corn</li>
                     </ul>
                 </div>
             </div>
@@ -91,68 +82,58 @@ function TechnologySkills () {
         switch (cardNum) {
             case 0:
                 return (
-                    <div className="bg-slate-800 rounded-md py-2 my-2 sm:h-84 transition-colors duration-300">
+                    <div className="card-card">
                         <div className='md:flex mx-5 max-md:flex-col items-center justify-between'>
-                            <p className="text-slate-200 text-2xl font-bold">Programmer on high school robotics team</p> 
-                            <p className="text-slate-200 mx-2 pt-1">2023 Season Charged Up</p>
+                            <p className="card-subtitle">Programmer on high school robotics team</p> 
+                            <p className="text-important">2023 Season Charged Up</p>
                         </div>
                         <ul className='list-disc list-inside mx-12'>
-                            <li className="text-slate-200">Worked to program the robot for both autonomous mode and driver controlled mode</li>
-                            <li className="text-slate-200">Used Java</li>
-                            <li className="text-slate-200">Used basic principles of object oriented programming and conditional logic</li>
-                            <li className="text-slate-200">Team qualified for state, ending up 34th in the State </li>
-                            <li className="text-slate-200">Qualified and competed at the World Competition in Houston, TX. </li>
-                            <li className="text-slate-200">Video of our robot <a className='text-teal-200 underline' href="https://www.youtube.com/watch?v=wdcOsfQ0gQE&t">here</a> (5152)</li>
+                            <li className="text">Worked to program the robot for both autonomous mode and driver controlled mode</li>
+                            <li className="text">Used Java</li>
+                            <li className="text">Used basic principles of object oriented programming and conditional logic</li>
+                            <li className="text">Team qualified for state, ending up 34th in the State </li>
+                            <li className="text">Qualified and competed at the World Competition in Houston, TX. </li>
+                            <li className="text">Video of our robot <a className='dark:text-teal-200 text-teal-600 underline' href="https://www.youtube.com/watch?v=wdcOsfQ0gQE&t">Here</a> (5152)</li>
                         </ul>
                     </div>
                 );
             case 1:
                 return (
-                    <div className="bg-slate-800 rounded-md py-2 my-2 sm:h-84 transition-colors duration-300">
+                    <div className="card-card">
                           <div className='md:flex mx-5 max-md:flex-col items-center justify-between'>
-                            <p className="text-slate-200 text-2xl font-bold">Web Development</p> 
+                            <p className="card-subtitle">Web Development</p> 
                         </div>
                         <ul className='mx-12 list-disc list-inside'>
                             <div className='flex items-center'>
-                                <div className='mr-2 my-2 w-fit h-fit bg-slate-600 px-2 py-2 rounded-lg'>
+                                <div className='img-bg'>
                                     <img src={jsImg} width={50} height={50}></img>
                                 </div>
-                                <div className='mr-2 my-2 w-fit h-fit bg-slate-600 px-2 py-2 rounded-lg'>
+                                <div className='img-bg'>
                                     <img src={tsImg} width={50} height={50}></img>
                                 </div>
-                                <div className='mr-2 my-2 w-fit bg-slate-600 px-2 py-2.5 rounded-lg'>
+                                <div className='mr-2 my-2 w-fit dark:bg-slate-600 bg-slate-300 px-2 py-2.5 rounded-lg'>
                                     <img src={reactImg} width={50} height={50}></img>
                                 </div>
-                                <div className='mr-2 my-2 w-fit h-fit bg-slate-600 px-2 py-2 rounded-lg'>
+                                <div className='img-bg'>
                                     <img src={vueImg} width={50} height={50}></img>
                                 </div>
-                                <div className='mr-2 my-2 w-fit h-fit bg-slate-600 px-2 py-3 rounded-lg'>
+                                <div className='mr-2 my-2 w-fit h-fit dark:bg-slate-600 bg-slate-300 px-2 py-3 rounded-lg'>
                                     <img src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=500" width={50} height={50}></img>
                                 </div>
                             </div>
-                            <li className="text-slate-200 text-bold">Knowledge of...</li>
+                            <li className="text">Knowledge of...</li>
                                 <ul className='mx-7 list-decimal list-inside'>
-                                    <li className="text-slate-200 text-sm">Javascript</li>
-                                    <li className="text-slate-200 text-sm">Typescript</li>
-                                    <li className="text-slate-200 text-sm">Vue</li>
-                                    <li className="text-slate-200 text-sm">React, which I used for this website</li>
-                                    <li className="text-slate-200 text-sm">TailwindCSS for styling</li>
+                                    <li className="text">Javascript</li>
+                                    <li className="text">Typescript</li>
+                                    <li className="text">Vue</li>
+                                    <li className="text">React, which I used for this website</li>
+                                    <li className="text">TailwindCSS for styling</li>
                                 </ul>
-                            <li className="text-slate-200">I created a project in 8th grade for visualizing translations, dilations, rotations, and reflections. I am currently working on V2.0 that uses React and is much better overall. You can view V1.0 <a href='https://rkortlandt.github.io/Translation-Project/' className='text-teal-200 underline'>here</a></li>
-                            <li className="text-slate-200">I am also currently working on an Application using Vue and a backend technology called <a href='https://pocketbase.io' className='text-teal-200 underline'>Pocketbase</a> to create a scouting app for FIRST roboitcs</li>
+                            <li className="text">I created a project in 8th grade for visualizing translations, dilations, rotations, and reflections. I am currently working on V2.0 that uses React and is much better overall. You can view V1.0 <a href='https://rkortlandt.github.io/Translation-Project/' className='text-teal-200 underline'>here</a></li>
+                            <li className="text">I am also currently working on an Application using Vue and a backend technology called <a href='https://pocketbase.io' className='text-teal-200 underline'>Pocketbase</a> to create a scouting app for FIRST roboitcs</li>
                         </ul>
                     </div>
                 );
-            // case 2:
-            //     return (
-            //         <div className="bg-slate-800 rounded-md py-2 my-2 sm:h-64">
-            //         </div>
-            //     );
-            // case 3: 
-            //     return (
-            //         <div className="bg-slate-800 rounded-md py-2 my-2 sm:h-64">
-            //         </div>
-            //     );
             default:
                 return (
                     <div className="bg-slate-800 rounded-md py-2 my-2 sm:h-64">
@@ -162,9 +143,9 @@ function TechnologySkills () {
         }
     }
     return (
-        <div className="bg-slate-600 mx-10 max-sm:mx-3 my-5 px-2 py-2 rounded-lg" >
+        <div className="card-background" >
             <div className="flex justify-between items-center">
-                <h1 className="text-4xl font-bold text-slate-200 py-1">Technology skills</h1>
+                <h1 className="card-title">Technology skills</h1>
                 <div className="flex items-center flex-col sm:flex-row">
                     <div className="bg-slate-200 rounded-lg w-fit h-fit flex justify-center items-center">
                         <button onClick={handleLeftClick} className="flex items-center hover:bg-slate-500 rounded-l-lg transition-colors"><span className="material-symbols-outlined">chevron_left</span></button>
@@ -204,10 +185,10 @@ function AboutMe () {
 
 
     return (
-        <div className="bg-slate-600 mx-10 max-sm:mx-3 my-5 px-2 py-2 rounded-lg" >
-            <h1 className="text-4xl font-bold text-slate-200 py-1">About Me</h1>
-            <div className="bg-slate-800 rounded-md py-2 my-2">
-                <p className="text-lg text-slate-200 py-1 px-2">{getTime()} My name is Rowan and I am a {getYears()} year old software developer. I play tennis in the fall, I love to read, and I am currently a Boy Scout. I attend Otsego High School and have a 4.0 GPA I am also in band and on the Drumline. I was selected to serve on the superintendent's advisory council. I am a very hard worker and motivated individual.</p>
+        <div className="card-background" >
+            <h1 className="card-title">About Me</h1>
+            <div className="card-card">
+                <p className="text-large">{getTime()} My name is Rowan and I am a {getYears()} year old software developer. I play tennis in the fall, I love to read, and I am currently a Boy Scout. I attend Otsego High School and have a 4.0 GPA I am also in band and on the Drumline. I was selected to serve on the superintendent's advisory council. I am a very hard worker and motivated individual.</p>
             </div>
         </div>
     );
@@ -215,11 +196,11 @@ function AboutMe () {
 
 function Certifications () {
     return (
-        <div className="bg-slate-600 mx-10 max-sm:mx-3 my-5 px-2 py-2 rounded-lg" >
-            <h1 className="text-4xl font-bold text-slate-200 py-1">Certifications</h1>
-            <div className="bg-slate-800 rounded-md py-2 my-2">
-                <p className="text-xl text-slate-200 py-1 px-2">Currently Working On</p>
-                    <p className='text-slate-200 px-3'>A certification from <a className='text-teal-200 underline' href='https://pythoninstitute.org'>Python Institute</a></p>   
+        <div className="card-background" >
+            <h1 className="card-title">Certifications</h1>
+            <div className="card-card">
+                <p className="text-lg">Currently Working On</p>
+                    <p className='text px-2'>A certification from <a className='text-teal-600 underline' href='https://pythoninstitute.org'>Python Institute</a></p>   
             </div>
         </div>
     );
@@ -227,37 +208,39 @@ function Certifications () {
 
 function References () {
     return (
-        <div className="bg-slate-600 mx-10 max-sm:mx-3 my-5 px-2 py-2 rounded-lg" >
-            <h1 className="text-4xl font-bold text-slate-200 py-1">References</h1>
-            <div className="bg-slate-800 rounded-md py-4 my-2">
-                <div className='px-5'>
-                    <p className="text-slate-200 text-2xl font-bold ">Michelle Triemstra - Director of Technology, Otsego Public Schools</p> 
-                    <p className="text-slate-200 text-xl px-3">Contact info: <br></br> 400 Sherwood Street Otsego, Mi 49078 <br></br> Work: 269-694-7900</p>
+        <div className="card-background" >
+            <h1 className="card-title">References</h1>
+            <div className="card-card">
+                <div className='px-4'>
+                    <p className="card-subtitle">Michelle Triemstra - Director of Technology, Otsego Public Schools</p> 
+                    <p className="text-large">Contact info: <br></br> 400 Sherwood Street Otsego, Mi 49078 <br></br> Work: 269-694-7900</p>
                 </div>
-                <div className='px-5'>
-                <p className="text-slate-200 text-2xl font-bold">Michael Miller Teacher/Robotics Coach, Otsego Public Schools</p>
-                <p className="text-slate-200 text-xl px-3">Contact info <br></br> 550 Washington Street Otsego, MI 49078 <br></br> 269-694-7900</p>
+                <div className='px-4'>
+                <p className="card-subtitle">Michael Miller Teacher/Robotics Coach, Otsego Public Schools</p>
+                <p className="text-large">Contact info:<br></br> 550 Washington Street Otsego, MI 49078 <br></br> 269-694-7900</p>
                 </div>
             </div>
         </div>
     );
 }
 
-function scrollIntoView (ref: React.RefObject<HTMLDivElement>) {
-    if (ref.current === null) return;
-    ref.current.scrollIntoView({behavior: 'smooth', block: 'center'});
-}
+type scrollTo = 'AboutMe' | 'WorkExperience' | 'TechnologySkills' | 'References' | 'Certifications' | null;
 
-export default function Hero (props: {scrollTo: 'AboutMe' | 'WorkExperience' | 'TechnologySkills' | 'References' | 'Certifications'}) {
+export default function Hero (props: { setScrollTo: (scrollTo: scrollTo) => void, scrollTo: scrollTo}) {
 
     const AboutMeRef = useRef<HTMLDivElement>(null);
     const WorkExperienceRef = useRef<HTMLDivElement>(null);
     const TechnologySkillsRef = useRef<HTMLDivElement>(null);
     const ReferencesRef = useRef<HTMLDivElement>(null);
     const CertificationsRef = useRef<HTMLDivElement>(null);
-    
+
+    function scrollIntoView (ref: React.RefObject<HTMLDivElement>) {
+        if (ref.current === null) return;
+        ref.current.scrollIntoView({behavior: 'smooth', block: 'center'});
+        props.setScrollTo(null);
+    }
+
     useEffect(() => {
-        console.log(`scrolling to ${props.scrollTo}`)
         switch (props.scrollTo) {
             case 'AboutMe':
                 scrollIntoView(AboutMeRef);
@@ -279,7 +262,7 @@ export default function Hero (props: {scrollTo: 'AboutMe' | 'WorkExperience' | '
         }
     }, [props.scrollTo]);
     return (
-        <div className="flex flex-col bg-slate-800 h-full w-full pt-12">
+        <div className="flex flex-col dark:bg-slate-800 h-full w-full pt-12">
             <div className='mb-20' ref={AboutMeRef}>
                 <AboutMe/>
             </div>
