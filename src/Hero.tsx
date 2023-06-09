@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/ban-ts-comment */
 //@ts-ignore
-import React, { useEffect, useRef, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import jsImg from './assets/js.webp';
 import tsImg from './assets/ts.jfif';
 import reactImg from './assets/react.svg';
