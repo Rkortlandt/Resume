@@ -4,7 +4,7 @@
 
 @layer components {
     .btn-nav-primary {
-      @apply lg:rounded-full lg:bg-slate-400 text-white font-semibold py-1.5 px-2 lg:mx-2 max-lg:border-b-slate-900 max-lg:border-b-2 max-lg:hover:bg-slate-400 hover:bg-slate-600 transition-colors
+      @apply lg:rounded-full lg:bg-slate-400 max-lg:text-black dark:max-lg:text-white text-white font-semibold py-1.5 px-2 lg:mx-2 max-lg:border-b-slate-900 max-lg:border-b-2 max-lg:hover:bg-slate-400 hover:bg-slate-600 transition-colors
     }
     .btn-theme {
       @apply dark:bg-slate-950 bg-slate-600 hover:bg-slate-700 dark:hover:bg-slate-700 lg:rounded-lg lg:bg-slate-500 text-white font-semibold px-2 py-1.5 max-lg:border-b-slate-900 transition-colors m-2 rounded-md drop-shadow-2xl
