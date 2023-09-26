@@ -1,4 +1,4 @@
-import { useEffect, useRef } from 'react';
+import { useRef } from 'react';
 import './index.css';
 export default function Nav(props: { setScrollTo: (scrollTo: 'AboutMe' | 'WorkExperience' | 'TechnologySkills' | 'References' | 'Certifications' | null) => void }) {
   const clickedTooltipRef = useRef<HTMLParagraphElement | null>(null);
