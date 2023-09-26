@@ -27,7 +27,7 @@ import Hero from './Hero';
 import Nav from './Nav';
 
 function App() {
-  const [darkMode, setDarkMode] = useState(false);
+  const [darkMode, setDarkMode] = useState((window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) ? true : false);
   const [scrollTo, setScrollTo] = useState<'AboutMe' | 'WorkExperience' | 'TechnologySkills' | 'References' | 'Certifications' | null>(null);
 
   // Check if the user has a dark mode preference in localStorage
