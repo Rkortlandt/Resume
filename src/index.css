@@ -13,7 +13,7 @@
       @apply dark:bg-slate-600 bg-slate-100 mx-10 max-sm:mx-3 my-5 px-2 py-2 rounded-lg max-h-fit shadow-lg
     }
     .card-title {
-      @apply text-4xl dark:font-bold font-semibold dark:text-slate-200 py-1 bg-slate-300 dark:bg-transparent w-fit p-2 rounded-lg shadow-lg dark:shadow-none
+      @apply text-4xl dark:font-bold font-semibold bg-transparent w-fit p-2 rounded-lg shadow-lg dark:shadow-none
     }
     .card-subtitle {
       @apply dark:text-slate-200 font-bold text-2xl
