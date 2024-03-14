@@ -148,12 +148,12 @@ function TechnologySkills () {
                 <h1 className="card-title">Technology skills</h1>
                 <div className="flex items-center flex-col sm:flex-row">
                     <div className="bg-slate-200 rounded-lg w-fit h-fit flex justify-center items-center">
-                        <button onClick={handleLeftClick} className="flex items-center hover:bg-slate-500 rounded-l-lg transition-colors"><span className="material-symbols-outlined">chevron_left</span></button>
-                        <button onClick={togglePause} className="flex items-center hover:bg-slate-500 transition-colors">
+                        <button onClick={handleLeftClick} className="flex items-center hover:bg-slate-500 dark:bg-slate-500 rounded-l-lg transition-colors"><span className="material-symbols-outlined">chevron_left</span></button>
+                        <button onClick={togglePause} className="flex items-center hover:bg-slate-500 dark:bg-slate-500 transition-colors">
                             {isPaused ? (<span className="material-symbols-outlined">play_arrow</span>) : (<span className="material-symbols-outlined">pause</span>)}</button>
-                        <button onClick={handleRightClick} className="flex items-center hover:bg-slate-500 rounded-r-lg transition-colors"><span className="material-symbols-outlined">chevron_right</span></button>
+                        <button onClick={handleRightClick} className="flex items-center hover:bg-slate-500 dark:bg-slate-500 rounded-r-lg transition-colors"><span className="material-symbols-outlined">chevron_right</span></button>
                     </div>
-                    <div className='sm:mx-1 bg-slate-200 px-2 rounded-lg my-1 grow'>
+                    <div className='sm:mx-1 bg-slate-200 px-2 rounded-lg my-1 grow dark:bg-slate-500'>
                         <p>{cardNum + 1} / {maxCardNum + 1}</p>
                     </div>
                 </div>
@@ -262,7 +262,7 @@ export default function Hero (props: { setScrollTo: (scrollTo: scrollTo) => void
         }
     }, [props.scrollTo]);
     return (
-        <div className="flex flex-col dark:bg-slate-800 h-full w-full pt-12">
+        <div className="flex flex-col dark:bg-slate-900 h-full w-full pt-12">
             <div className='mb-20' ref={AboutMeRef}>
                 <AboutMe/>
             </div>

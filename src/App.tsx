@@ -42,10 +42,10 @@ function App() {
 
   return (
     <div className={`App ${darkMode ? 'dark' : 'light'}`}>
-      <div className='dark:bg-slate-800'>
+      <div className='dark:bg-slate-900'>
         <Nav setScrollTo={setScrollTo} />
         <Hero setScrollTo={setScrollTo} scrollTo={scrollTo} />
-        <div className='sticky bottom-0 right-0'>
+        <div className='sticky bottom-0 left-0'>
           <button className='btn-theme' onClick={toggleDarkMode}>
             <span className="material-symbols-outlined">
               {!darkMode ? 'dark_mode' : 'light_mode'}
